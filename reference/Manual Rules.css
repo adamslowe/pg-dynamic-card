@@ -1,0 +1,38 @@
+:root {
+    --pure-white: #ffffff;
+    --medium-white: #d6d6d6;
+    --text-dark: #212529;
+    --text-light: #5f6c7a;
+    --text-medium: #2b3035;
+    --primary-color: #642075;
+    --card-padding: 1em;
+    --card-radius: 0.25rem;
+    --card-gap: 0.5em;
+}
+
+.carddemo__body p {
+    margin-block-start: 0;
+    margin-block-end: 0;
+}
+
+.carddemo__accessibility-text {
+    border: 0 !important;
+    clip: rect(1px, 1px, 1px, 1px) !important;
+    -webkit-clip-path: inset(50%) !important;
+    clip-path: inset(50%) !important;
+    height: 1px !important;
+    overflow: hidden !important;
+    margin: -1px !important;
+    padding: 0 !important;
+    position: absolute !important;
+    width: 1px !important;
+    white-space: nowrap !important;
+}
+
+.carddemo__accessibility-text:focus {
+    clip: auto;
+    height: auto;
+    overflow: auto;
+    position: absolute;
+    width: auto;
+}

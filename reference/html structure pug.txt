@@ -1,0 +1,83 @@
+section(class="carddemo")
+    h1(class="carddemo__headline")
+    ul(class="carddemo__grid")
+        li(class="carddemo__griditem")
+            div(class="carddemo__headshot-wrapper")
+                img(class="carddemo__headshot-photo")
+            div(class="carddemo__contents")
+                h3(class="carddemo__employee-name")
+                div(class="carddemo__job-title")
+                p(class="carddemo__bio")
+            div(class="carddemo__footer")
+                div(class="carddemo__icon-wrapper")
+                    i(class="carddemo__icon")
+                    i
+                    i
+        li
+        li
+
+
+
+
+Oxygen Markers
+4:51:11     Oxygen - Grid and Card Structure
+9:17:13     Oxygen - Grid and Card Styling
+15:52:01    Oxygen - Headshot Section 
+17:27:08    Oxygen - Changing Markup of Card Elements
+18:31:15    Oxygen - Styling Body Content
+22:31:21    Oxygen - Footer Section
+23:35:19    Oxygen - Working with SVG Icons
+26:18:03    Oxygen - Layout Finishing Touches (other cards)
+xx:xx:xx    Oxygen - Card Biography Link
+xx:xx:xx    Oxygen - Social Icon Links
+xx:xx:xx    Oxygen - Final Accessibility Testing
+
+
+## Link Card to Bio Page 
+- Name Link Wrapper  
+    - Link wrapper clickable-parent::after class 
+- Grid Item
+    - Transform translate y -1rem 
+    - Transition transition: all .3s ease-in-out 0s
+    - Box shadow 2px 2px 40px -1px 20% rgba(0,0,0,0.2)
+    - Position relative
+- Footer
+    - Position Relative 
+- Bio 
+    - Position Relative 
+
+## Link Footer Icons 
+- Icon wrapper 
+    - display flex column 
+- Create Accessibility Text Span 
+    - Follow Jane Dewey on Facebook
+    - Class .sr-only
+- Aria label to Icon
+    - aria-hidden: true 
+
+
+
+
+## Linking the card using clickable-parent::after
+    - on link wrapper
+.clickable-parent::after {
+    content: '';
+    display: flex;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    cursor: pointer;
+}
+
+## Hover Styles on Grid Item
+.carddemo__griditem:hover {
+    box-shadow: 2px 2px 40px -1px rgba(0,0,0,0.2);
+}
+
+.carddemo__griditem:focus-within {
+    box-shadow: 0px 0px 0px 1.5px var(--primary);
+}
+
+## position relative on grid item, footer,  and bio text
